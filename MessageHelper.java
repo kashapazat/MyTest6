@@ -1,6 +1,5 @@
 import org.openqa.selenium.By;
 
-
 public class MessageHelper extends HelperBase {
 
     public MessageHelper(AppManager manager) {
@@ -20,8 +19,5 @@ public class MessageHelper extends HelperBase {
     protected void deleteContent(String cssSelector){
         clickByCssSelector(cssSelector);
     }
-
-
-
 
 }

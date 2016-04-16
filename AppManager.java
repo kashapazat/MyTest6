@@ -1,8 +1,7 @@
+import org.testng.annotations.*;
+import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-
-import static org.testng.Assert.fail;
 
 
 public class AppManager {
@@ -23,7 +22,14 @@ public class AppManager {
     }
 
 
-
+    @AfterClass(alwaysRun = true)
+    protected void Stop() throws Exception {
+        driver.quit();
+        String verificationErrorString = verificationErrors.toString();
+        if (!"".equals(verificationErrorString)) {
+            fail(verificationErrorString);
+        }
+    }
 
     protected boolean isElementPresent(By by) {
         try {
@@ -96,14 +102,5 @@ public class AppManager {
 
     public void setMessageHelper(MessageHelper messageHelper) {
         this.messageHelper = messageHelper;
-    }
-
-
-    public void Stop() throws Exception {
-        driver.quit();
-        String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
-            fail(verificationErrorString);
-        }
     }
 }

@@ -1,8 +1,5 @@
 import org.openqa.selenium.By;
 
-/**
- * Created by Rail on 11.04.2016.
- */
 public class LoginHelper extends HelperBase {
     public LoginHelper(AppManager manager) {
         super(manager);
@@ -14,6 +11,6 @@ public class LoginHelper extends HelperBase {
         manager.navigationHelper.button("//button[@type='submit']");
     }
     protected void logout() {
-        manager.driver.findElement(By.linkText("Выйти")).click();
+        manager.driver.findElement(By.linkText("Выход")).click();
     }
 }

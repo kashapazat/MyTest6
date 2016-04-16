@@ -2,9 +2,6 @@ import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 
-
-
-
 public class TestBase {
     protected AppManager app;
     protected StringBuffer verificationErrors = new StringBuffer();
@@ -16,11 +13,8 @@ public class TestBase {
         app.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         app.navigationHelper.goToHomePage();
         app.navigationHelper.goToLoginPage();
-        app.loginHelper.login(new AccountData("kashapazat@gmail.com", "g9wxzxw6"));
+        app.loginHelper.login(new AccountData("itisazat", "g9wxzxw6"));
     }
-
-
-
 
     @AfterClass(alwaysRun = true)
     protected void tearDown() throws Exception {

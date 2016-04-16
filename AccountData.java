@@ -1,6 +1,3 @@
-/**
- * Created by Rail on 11.04.2016.
- */
 public class AccountData {
     private String login;
     private String password;

@@ -1,8 +1,6 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
-
 public class HelperBase {
     protected WebDriver driver;
     protected AppManager manager;

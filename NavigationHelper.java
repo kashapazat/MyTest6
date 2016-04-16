@@ -1,6 +1,5 @@
 import org.openqa.selenium.By;
 
-
 public class NavigationHelper extends HelperBase {
 
     private String baseUrl;
@@ -10,21 +9,19 @@ public class NavigationHelper extends HelperBase {
         this.baseUrl = baseUrl;
     }
 
-    public void goToPageQuestionsPage(){goToLinkByTextLink("Вопросы");}
+    public void goToGamesPage(){goToLinkByTextLink("Игры");}
 
-    public void goToProfilePage(){goToLinkByTextLink("Профиль");}
+    public void goToProfilePage(){goToLinkByTextLink("Личная страница");}
 
-    public void goToForumPage(){goToLinkByTextLink("Обсуждения");}
+    public void goToSoftwarePage(){goToLinkByTextLink("Программы");}
 
-    public void goToUsersPage(){goToLinkByTextLink("Пользователи");}
+    public void goToNewsPage(){goToLinkByTextLink("Новости");}
 
-    public void goToAboutPage(){goToLinkByTextLink("О нас");}
+    public void goToAboutPage(){goToLinkByTextLink("О проекте");}
 
-    public void goToAskPage(){goToLinkByTextLink("Задать Вопрос");    }
+    public void goToForumPage(){goToLinkByTextLink("Наш форум");    }
 
     public void goToTopicPage(String path){goToLinkByXpath(path);}
-
-    public void goToLoginPage() {goToLinkByTextLink("Войти");}
 
     public void goToHomePage() {
         driver.get(baseUrl);
