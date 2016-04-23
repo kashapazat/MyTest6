@@ -1,6 +1,7 @@
 import java.util.concurrent.TimeUnit;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
+import java.util.Random;
 
 public class TestBase {
     protected AppManager app;
@@ -23,5 +24,15 @@ public class TestBase {
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
         }
+    }
+
+    public String generateRandomString(int size){
+        StringBuilder result = new StringBuilder();
+        String symbols = "qwertyuioplkjhgfdsazxcvbnm";
+        Random random = new Random();
+        for (int i=0;i< size;i++){
+            result.append(symbols.charAt(random.nextInt(symbols.length())));
+        }
+        return  result.toString();
     }
 }

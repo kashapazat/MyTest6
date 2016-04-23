@@ -15,7 +15,7 @@ public class AppManager {
 
     public AppManager() {
         driver = new FirefoxDriver();
-        baseUrl = "http://www.softodrom.ru/";
+        baseUrl = baseConfig.getBaseUrl();
         loginHelper = new LoginHelper(this);
         navigationHelper = new NavigationHelper(this, baseUrl);
         messageHelper = new MessageHelper(this);
